@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :companies
-    get '/vacamcies' => 'vacancies#index', as: :company_root
+    get '/vacancies' => 'vacancies#index', as: :company_root
   resources :applicants
   resources :vacancies
   resources :companies
