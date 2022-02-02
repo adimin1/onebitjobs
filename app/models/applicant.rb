@@ -1,4 +1,4 @@
 class Applicant < ApplicationRecord
-  belongs_to :vancancy
+  belongs_to :vacancy
   validates :name, presence: true
 end

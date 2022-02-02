@@ -14,10 +14,10 @@ ActiveRecord::Schema.define(version: 2022_02_01_221039) do
 
   create_table "applicants", force: :cascade do |t|
     t.string "name"
-    t.integer "vancancy_id", null: false
+    t.integer "vacancy_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["vancancy_id"], name: "index_applicants_on_vancancy_id"
+    t.index ["vacancy_id"], name: "index_applicants_on_vacancy_id"
   end
 
   create_table "companies", force: :cascade do |t|
@@ -47,6 +47,6 @@ ActiveRecord::Schema.define(version: 2022_02_01_221039) do
     t.index ["company_id"], name: "index_vacancies_on_company_id"
   end
 
-  add_foreign_key "applicants", "vancancies"
+  add_foreign_key "applicants", "vacancies"
   add_foreign_key "vacancies", "companies"
 end
